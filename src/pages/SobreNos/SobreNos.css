@@ -1,0 +1,324 @@
+.sobre-nos-page {
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+}
+
+.sobre-nos-main {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Enhanced Hero Section */
+.sobre-nos-page .sobre-nos-hero {
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 6rem 2rem;
+  margin: 0 auto;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.sobre-nos-page .sobre-nos-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.8) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.sobre-nos-page .sobre-nos-hero-content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  z-index: 3;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.sobre-nos-page .sobre-nos-hero-title {
+  font-family: 'QothoW01-Medium', sans-serif;
+  font-size: 7rem;
+  color: white;
+  margin-bottom: 1rem;
+  text-align: center;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+  letter-spacing: -2px;
+  line-height: 1;
+  text-shadow: 
+    0 4px 12px rgba(242, 135, 5, 0.2),
+    0 8px 24px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #ffffff 0%, #F28705 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.sobre-nos-page .sobre-nos-hero-subtitle {
+  font-family: 'Geist', sans-serif;
+  font-size: 1.8rem;
+  color: #cccccc;
+  line-height: 1.6;
+  animation: fadeInUp 0.8s ease 0.2s forwards;
+  opacity: 0;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 300;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Enhanced Mission Section */
+.sobre-nos-page .mission-section {
+  padding: 8rem 2rem;
+  position: relative;
+}
+
+.sobre-nos-page .mission-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.sobre-nos-page .mission-content,
+.sobre-nos-page .vision-content {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(242, 135, 5, 0.1);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.sobre-nos-page .mission-content:hover,
+.sobre-nos-page .vision-content:hover {
+  transform: translateY(-5px);
+  border-color: rgba(242, 135, 5, 0.3);
+}
+
+.sobre-nos-page .section-title {
+  font-family: 'QothoW01-Medium', sans-serif;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  letter-spacing: -0.5px;
+}
+
+.sobre-nos-page .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #F28705, transparent);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.sobre-nos-page .section-title:hover::after {
+  width: 100%;
+}
+
+/* Enhanced Values Section */
+.sobre-nos-page .values-section {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+}
+
+.sobre-nos-page .values-grid {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.sobre-nos-page .value-card {
+  background: rgba(242, 135, 5, 0.03);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  border: 1px solid rgba(242, 135, 5, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.sobre-nos-page .value-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(242, 135, 5, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sobre-nos-page .value-card:hover {
+  transform: translateY(-10px);
+  background: rgba(242, 135, 5, 0.05);
+  border-color: rgba(242, 135, 5, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.sobre-nos-page .value-card:hover::before {
+  opacity: 1;
+}
+
+.sobre-nos-page .value-icon {
+  font-size: 2.8rem;
+  color: #F28705;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.sobre-nos-page .value-card:hover .value-icon {
+  transform: scale(1.1);
+}
+
+/* Update Value Cards */
+.sobre-nos-page .value-title {
+  color: white;
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  font-family: 'QothoW01-Medium', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.sobre-nos-page .value-description {
+  color: #cccccc;
+  font-family: 'Geist', sans-serif;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* Enhanced Team Section */
+.sobre-nos-page .team-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
+  position: relative;
+}
+
+.sobre-nos-page .team-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px solid rgba(242, 135, 5, 0.1);
+}
+
+.sobre-nos-page .team-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sobre-nos-page .section-text {
+  font-family: 'Geist', sans-serif;
+  font-size: 1.1rem;
+  color: #cccccc;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced media queries */
+@media screen and (max-width: 768px) {
+  .sobre-nos-page .sobre-nos-hero {
+    padding: 6rem 1rem;
+    min-height: 70vh;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .sobre-nos-page .sobre-nos-hero-content {
+    padding: 0;
+    width: 100%;
+  }
+
+  .sobre-nos-page .sobre-nos-hero-title {
+    font-size: 4rem;
+    letter-spacing: -1px;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .sobre-nos-page .sobre-nos-hero-subtitle {
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sobre-nos-page .mission-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .sobre-nos-page .section-title {
+    font-size: 2.5rem;
+  }
+
+  .sobre-nos-page .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sobre-nos-page .sobre-nos-hero {
+    padding: 5rem 0.5rem;
+  }
+
+  .sobre-nos-page .sobre-nos-hero-title {
+    font-size: 3rem;
+  }
+
+  .sobre-nos-page .sobre-nos-hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .sobre-nos-page .section-title {
+    font-size: 2rem;
+  }
+} 

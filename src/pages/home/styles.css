@@ -1,0 +1,261 @@
+:root {
+  --yellow: #ffa500;
+  --blue: #003366;
+}
+
+.home-container {
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.hero-container {
+  height: 85vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  padding: 2rem;
+  position: relative;
+}
+
+.hero-content {
+  position: absolute;
+  text-align: center;
+  width: 85%;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.hero-title {
+  color: white;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 500;
+  width: 100%;
+  font-family: 'Lexend Deca', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  color: #ffffff;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 300;
+  font-family: 'Lexend Deca', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  padding: 0 1rem;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  z-index: 1;
+  padding: clamp(1rem, 3vw, 3rem);
+}
+
+.center-image {
+  max-width: min(85%, 600px);
+  max-height: 85%;
+  object-fit: contain;
+  display: block;
+}
+
+.blur-effect {
+  filter: blur(8px);
+  transition: filter 0.3s ease;
+}
+
+.spinning {
+  animation: spin3D 8s infinite linear;
+}
+
+@keyframes spin3D {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.spinning:hover {
+  animation-play-state: paused;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+  25% {
+    transform: rotate3d(1, 0, 0, 10deg);
+  }
+  75% {
+    transform: rotate3d(1, 0, 0, -10deg);
+  }
+  100% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+}
+
+.highlight-blue {
+  color: var(--blue);
+  font-weight: 800;
+  display: inline-block;
+  transform-style: preserve-3d;
+  animation: tilt 3s ease-in-out infinite;
+  perspective: 1000px;
+}
+
+.highlight-yellow {
+  color: var(--yellow);
+  font-weight: 800;
+  display: inline-block;
+  transform-style: preserve-3d;
+  animation: tilt 3s ease-in-out infinite;
+  animation-delay: 1.5s;
+  perspective: 1000px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .hero-container {
+    padding: 1.5rem;
+    height: 80vh;
+  }
+
+  .hero-content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .image-wrapper {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container {
+    padding: 1rem;
+    height: 75vh;
+  }
+
+  .hero-content {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .highlight-blue,
+  .highlight-yellow {
+    display: inline;
+    animation: none;
+    transform: none;
+  }
+
+  .spinning {
+    animation-duration: 12s;
+  }
+
+  .image-wrapper {
+    padding: 1rem;
+  }
+
+  .center-image {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-container {
+    height: 70vh;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .hero-subtitle {
+    padding: 0 0.5rem;
+  }
+
+  .center-image {
+    max-width: 95%;
+  }
+}
+
+/* Handle landscape orientation on mobile */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .hero-container {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 4rem;
+  }
+
+  .hero-content {
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+    margin: 2rem auto;
+  }
+
+  .image-wrapper {
+    height: auto;
+    min-height: 50vh;
+  }
+}
+
+/* Handle ultra-wide screens */
+@media screen and (min-width: 1920px) {
+  .hero-container {
+    max-width: 1600px;
+  }
+
+  .hero-title {
+    font-size: 5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+    max-width: 1000px;
+  }
+}
+
+/* Handle very small screens */
+@media screen and (max-width: 320px) {
+  .hero-container {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    margin-top: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+} 

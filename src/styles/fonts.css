@@ -1,0 +1,75 @@
+/* Qotho Font Faces */
+@font-face {
+  font-family: 'QothoW01-ThinCondensed';
+  src: url('https://c.webfontfree.com/f/qothow01-thincondensed.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'QothoW01-Thin';
+  src: url('https://c.webfontfree.com/f/qothow01-thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'QothoW01-MediumCondensed';
+  src: url('https://c.webfontfree.com/f/qothow01-mediumcondensed.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'QothoW01-Medium';
+  src: url('https://c.webfontfree.com/f/qothow01-medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'QothoW01-LightCondensed';
+  src: url('https://c.webfontfree.com/f/qothow01-lightcondensed.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'QothoW01-Light';
+  src: url('https://c.webfontfree.com/f/qothow01-light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'QothoW01-DarkCondensed';
+  src: url('https://c.webfontfree.com/f/qothow01-darkcondensed.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'QothoW01-Dark';
+  src: url('https://c.webfontfree.com/f/qothow01-dark.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'QothoW01-Black';
+  src: url('https://c.webfontfree.com/f/qothow01-black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Geist Font */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&display=swap'); 
