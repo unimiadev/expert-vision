@@ -25,6 +25,31 @@
   box-sizing: border-box;
 }
 
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #25D366;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+}
+
+.whatsapp-button:hover {
+  transform: translateY(-2px);
+  background: #22c35e;
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-icon {
+  font-size: 1.4rem;
+}
+
 @media screen and (max-width: 768px) {
   .contact-form {
     padding: 1.5rem;
@@ -37,5 +62,14 @@
 
   .contact-form textarea {
     width: 100%;
+  }
+
+  .whatsapp-button {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+  }
+  
+  .whatsapp-icon {
+    font-size: 1.2rem;
   }
 } 

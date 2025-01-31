@@ -28,8 +28,26 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData);
+
+    // Create email content
+    const emailSubject = "Novo Contato - Expert Vision";
+    const emailBody = `
+Nome: ${formData.name}
+Email: ${formData.email}
+Telefone: ${formData.phone}
+Data: ${formData.date}
+Horário: ${formData.time}
+Descrição: ${formData.description}
+    `.trim();
+
+    // Create mailto link
+    const mailtoLink = `mailto:contato@expertvision.com.br?subject=${encodeURIComponent(
+      emailSubject
+    )}&body=${encodeURIComponent(emailBody)}`;
+
+    // Open email client
+    window.location.href = mailtoLink;
+
     // Reset form
     setFormData({
       name: "",
@@ -53,20 +71,20 @@ const Contact = () => {
             </p>
             <div className="contact-methods">
               <a
-                href="https://wa.me/5511999999999"
+                href="https://wa.me/5554999062213"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact-method"
+                className="whatsapp-button"
               >
-                <FaWhatsapp className="contact-icon" />
-                <span>WhatsApp Direto</span>
+                <FaWhatsapp className="whatsapp-icon" />
+                <span>Fale Conosco no WhatsApp</span>
               </a>
               <a
-                href="mailto:contato@expertvision.com"
+                href="mailto:contato@expertvision.com.br"
                 className="contact-method"
               >
                 <FaEnvelope className="contact-icon" />
-                <span>contato@expertvision.com</span>
+                <span>contato@expertvision.com.br</span>
               </a>
             </div>
           </div>
